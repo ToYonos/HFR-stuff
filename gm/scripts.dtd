@@ -1,0 +1,13 @@
+<!ELEMENT gmscripts ( gmscript* ) >
+	<!ELEMENT gmscript ( include*,exclude*,require* ) >
+	<!ATTLIST gmscript id ID #REQUIRED>
+	<!ATTLIST gmscript name CDATA #REQUIRED>
+	<!ATTLIST gmscript version CDATA #REQUIRED>
+	<!ATTLIST gmscript namespace CDATA #REQUIRED>
+	<!ATTLIST gmscript description CDATA #REQUIRED>
+		<!ELEMENT include ( #PCDATA ) >
+		<!ATTLIST include url CDATA #REQUIRED>
+		<!ELEMENT exclude ( #PCDATA ) >
+		<!ATTLIST exclude url CDATA #REQUIRED>
+		<!ELEMENT require ( #PCDATA ) >
+		<!ATTLIST require url CDATA #REQUIRED>

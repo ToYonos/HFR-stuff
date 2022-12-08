@@ -1,0 +1,116 @@
+<?php
+
+require 'config/alerteQualitay.config.php5';
+require 'core/alerte.class.php5';
+require 'core/rapporteur.class.php5';
+require 'dao/daoAlerteQualitayMySql.class.php5';
+
+$dom = new DOMDocument('1.0', 'utf-8');
+$dom->formatOutput = true;
+
+$root = $dom->createElement('rss');
+$root->setAttribute('version', '2.0');
+$dom->appendChild($root);
+$channel = $dom->createElement('channel');
+$root->appendChild($channel);
+
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode('Alertes Qualitaÿ sur HFR'));
+$channel->appendChild($title);
+
+$description = $dom->createElement('description');
+$description->appendChild($dom->createTextNode('Pour ne rien rater du meilleur d\'HFR, en toutes circonstances !'));
+$channel->appendChild($description);
+
+$link = $dom->createElement('link');
+$link->appendChild($dom->createTextNode('http://forum.hardware.fr/'));
+$channel->appendChild($link);
+
+$language = $dom->createElement('language');
+$language->appendChild($dom->createTextNode('fr'));
+$channel->appendChild($language);
+
+$copyright = $dom->createElement('copyright');
+$copyright->appendChild($dom->createTextNode('Copyright 2009 ToYonos'));
+$channel->appendChild($copyright);
+
+$lastBuildDate = $dom->createElement('lastBuildDate');
+$lastBuildDate->appendChild($dom->createTextNode(date(DATE_RFC822)));
+$channel->appendChild($lastBuildDate);
+
+$image = $dom->createElement('image');
+$channel->appendChild($image);
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode('Alerte Qualitaÿ'));
+$image->appendChild($title);
+$url = $dom->createElement('url');
+$url->appendChild($dom->createTextNode('./img/logo.gif'));
+$image->appendChild($url);
+
+$dao = new daoAlerteQualitayMySql();
+$dao->connect();
+
+$alertes = $dao->getAlertes();
+foreach ($alertes as $alerte)
+{
+	$item = $dom->createElement('item');
+
+	$title = $dom->createElement('title');
+	$title->appendChild($dom->createTextNode($alerte->getNom()));
+	$item->appendChild($title);
+	
+	$nbRapporteurs = 0;
+	foreach ($alerte->getRapporteurs() as $postId => $rapporteurs) $nbRapporteurs += count($rapporteurs);
+	$mainLink = null;
+	$mainDate = null;
+	
+	$descriptionContent = '<p>Une qualitaÿ a été detectée sur <b>'.$alerte->getTopicTitre().'</b></p>';
+	$descriptionContent .= '<p>Elle a été signalée <b>'.$nbRapporteurs.' fois</b> par les membres suivants :</p>';
+	foreach ($alerte->getRapporteurs() as $postId => $rapporteurs)
+	{
+		$descriptionContent .= '<p>&nbsp;&nbsp;&nbsp;<b>#</b> '.count($rapporteurs).' fois via <a href="'.$rapporteurs[0]->getPostUrl().'">ce post</a> : ';
+		$descriptionContent .= '<ul>';
+		foreach ($rapporteurs as $rapporteur)
+		{
+			$descriptionContent .= '<li>';
+			$descriptionContent .= '['.date('\l\e d-m-Y à H:i:s', strtotime($rapporteur->getDate())).'] ';
+			if ($rapporteur->isInitiateur())
+			{
+				$descriptionContent .= '<b>'.$rapporteur->getPseudo().' (initiateur)</b>';
+				$mainLink = $rapporteur->getPostUrl();
+				$mainDate = $rapporteur->getDate();
+			}
+			else
+			{
+				$descriptionContent .= $rapporteur->getPseudo();
+			}
+			$descriptionContent .= $rapporteur->getCommentaire() == null ? ' : (pas de commentaire)' : ' : '.$rapporteur->getCommentaire();
+			$descriptionContent .= '</li>';
+		}
+		$descriptionContent .= '</ul>';
+		$descriptionContent .= '</p>';
+	}
+	
+	$link = $dom->createElement('link');
+	$link->appendChild($dom->createTextNode($mainLink));
+	$item->appendChild($link);
+	
+	$pubDate = $dom->createElement('pubDate');
+	$pubDate->appendChild($dom->createTextNode(date(DATE_RFC822, strtotime($mainDate))));
+	$item->appendChild($pubDate);
+	
+	$description = $dom->createElement('description');
+	$description->appendChild($dom->createCDATASection($descriptionContent));
+	$item ->appendChild($description);
+
+	$channel->appendChild($item);
+}
+
+$dao->disconnect();
+
+header('Content-Type: application/rss+xml;charset=utf-8');
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Pragma: no-cache');
+echo $dom->saveXml();
+
+?>

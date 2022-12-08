@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE gmscripts SYSTEM "scripts.dtd">
+
+<gmscripts>
+	<gmscript id="hfr_sujets_compacts" name="[HFR] Sujets compacts" version="0.1.1" namespace="http://toyonos.info" description="Elimine les catégories sans nouveaux messages dans la page 'Vos sujets'">
+		<include url="http://forum.hardware.fr/forum1f.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_suppression_rapide_posts" name="[HFR] Suppression rapide de posts" version="0.2.4" namespace="http://toyonos.info" description="Permet de supprimer un de ses posts via un bouton sans passer par la page de réponse">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+
+	<gmscript id="wiki_smilies_rapide" name="[HFR] Wiki smilies &amp; raccourcis dans la reponse/edition rapide" version="0.6.3a" namespace="http://toyonos.info" description="Rajoute le wiki smilies et des raccourcis clavier pour la mise en forme, dans la réponse rapide et dans l'édition rapide du forum hardware.fr">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="wiki_smilies_rapide_v2" name="[HFR] Wiki smilies &amp; raccourcis dans la reponse/edition rapide" version="0.6.4b" namespace="http://toyonos.info" description="Rajoute le wiki smilies et des raccourcis clavier pour la mise en forme, dans la réponse rapide et dans l'édition rapide du forum hardware.fr">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="citation_reponse_rapide" name="[HFR] Citation dans la reponse rapide" version="0.2.1" namespace="http://toyonos.info" description="Rajoute le systeme de citation dans la zone de réponse rapide via un double clic sur les icônes correspondantes">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_epgr" name="[HFR] Plugin epgr" version="0.1.1" namespace="http://toyonos.info" description="Plugin epgr pour HFR, afin d'obtenir la date de diffusion d'épisodes d'une série">
+		<include url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="apercu_reponse_rapide" name="[HFR] Apercu des posts dans la reponse/edition rapide" version="0.2.5" namespace="http://toyonos.info" description="Rajoute l'aperçu du message dans la réponse rapide et dans l'édition rapide du forum hardware.fr">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+
+	<gmscript id="hfr_smilies_enhancement" name="[HFR] Smilies enhancement" version="0.1.3" namespace="http://toyonos.info" description="Remplace les codes par les smileys correspondant au passage de la souris, dans les posts où les smileys sont désactivés">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>	
+	
+	<gmscript id="infos_profil_hfr" name="[HFR] Informations rapides sur le profil" version="0.2.6a" namespace="http://toyonos.info" description="Rajoute un bouton pour avoir un accès rapide à certaines infos du profil d'un membre">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="infos_profil_hfr_v2" name="[HFR] Informations rapides sur le profil" version="0.2.7b" namespace="http://toyonos.info" description="Rajoute un bouton pour avoir un accès rapide à certaines infos du profil d'un membre">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="infos_profil_hfr_v3" name="[HFR] Informations rapides sur le profil" version="0.2.5c" namespace="http://toyonos.info" description="Rajoute un accès rapide à certaines infos du profil d'un membre au passage de la souris sur le pseudo">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_limitation_taille_images_a" name="[HFR] Limitation de la taille des images" version="0.2.5a" namespace="http://toyonos.info" description="Permet de limiter la taille des images dans les posts et de leur rendre leur taille d'origine par un clic ou un double clic">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_limitation_taille_images_b" name="[HFR] Limitation de la taille des images" version="0.2.5b" namespace="http://toyonos.info" description="Permet de limiter la taille des images dans les posts et de leur rendre leur taille d'origine par un clic sur une icône">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_suppression_rapide_mps" name="[HFR] Suppression rapide de mps" version="0.2.3" namespace="http://toyonos.info" description="Permet de supprimer un mp donné via un bouton dans la liste des mps et dans le mp lui-même">
+		<include url=" http://forum.hardware.fr/forum*cat=prive*" />
+	</gmscript>
+	
+	<gmscript id="hfr_edition_wiki_smilies_rapide" name="[HFR] Edition rapide du Wiki smilies" version="0.1.4" namespace="http://toyonos.info" description="Permet de faire rapidement des modifications dans le wiki smilies via un double clic sur un smiley perso donné">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_sleath_rehost" name="[HFR] Sleath Rehost" version="0.1.1" namespace="http://toyonos.info" description="Permet de remplacer le domaine hfr-rehost.net par un alias dans les liens et les images">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_private_chat" name="[HFR] Private Chat" version="0.1.7" namespace="http://toyonos.info" description="Permet de communiquer par chat avec tout membre du forum, en sa basant sur le système des mps">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/bddpost.php" />
+	</gmscript>
+	
+	<gmscript id="hfr_ouverture_drapeaux_masse" name="[HFR] Ouverture de drapeaux en masse" version="0.2.5" namespace="http://toyonos.info" description="Permet d'ouvrir ses drapeaux dans de nouveaux onglets pour une catégorie donnée">
+		<include url="http://forum.hardware.fr/forum1f.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_alerte_qualitay" name="[HFR] Alerte Qualitaÿ" version="0.1.5" namespace="http://toyonos.info" description="Permet de signaler une alerte qualitaÿ à la communauté">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+		<exclude url="http://forum.hardware.fr/forum*cat=prive*" />
+	</gmscript>
+	
+	<gmscript id="hfr_multi_switcher" name="[HFR] Multi Switcher" version="0.1.2" namespace="http://toyonos.info" description="Permet de poster rapidement avec un multi sans avoir besoin de se déconnecter du forum">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+		<exclude url="http://forum.hardware.fr/forum*cat=prive*" />
+	</gmscript>
+
+	<gmscript id="hfr_rss_signature" name="[HFR] RSS Signature" version="0.1.3" namespace="http://toyonos.info" description="Permet d'avoir une signature dynamique qui reprend le dernier élément d'un flux RSS">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>
+	
+	<gmscript id="hfr_prompt_search" name="[HFR] Prompt Search" version="0.1.1" namespace="http://toyonos.info" description="Ajoute la recherche instantanée dans la zone idoine dans le header du forum">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>
+	
+	<gmscript id="hfr_poker_enhance" name="[HFR] Poker Enhance" version="0.1.2" namespace="http://toyonos.info" description="Affiche les cartes dans le topic poker">
+		<include url="http://forum.hardware.fr/*40677*" />
+	</gmscript>	
+	
+	<!-- ***************************************************************************************** -->
+	
+	<gmscript id="youtube_link_replacement" name="[Mes Discussions] Video Link Replacer" version="0.1.8" namespace="http://noledgedis.com/" description="Replace a youtube, dailymotion or vimeo link by an embed video">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>
+	
+	<gmscript id="hfr_smart_auto_rehost" name="[HFR] Smart Auto Rehost" version="4.0.6" namespace="http://mycrub.info" description="Rehost automatiquement (sur hfr-rehost.net) les images provenant d'une liste de sites donnés">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>	
+	
+	<gmscript id="hfr_black_list" name="[HFR] Black List" version="0.7.2" namespace="http://nykal.fr" description="Mask messages from black listed users on forum.hardware.fr">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+		<exclude url="http://forum.hardware.fr/forum1.php*" />
+		<exclude url="http://forum.hardware.fr/forum1f.php*" />
+	</gmscript>
+	
+	<gmscript id="hfr_image_anti_hs" name="[HFR] Image Anti HS" version="0.2.3" namespace="http://mycrub.info" description="Ajoute une icône anti-hs en haut d'une page d'un topic pour filtrer les messages sans intérêt">
+		<include url="http://forum.hardware.fr/forum2.php*" />
+		<include url="http://forum.hardware.fr/*/*/*/*-sujet_*_*.htm*" />
+	</gmscript>
+	
+	<gmscript id="hfr_postmanager" name="[HFR] PostManager" version="0.1.1" namespace="http://anonymouse" description="Sauvegarde et ajout de posts">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>
+	
+	<gmscript id="hfr_nombre_pages_retard" name="[HFR] Nombre de pages en retard" version="1.3.0" namespace="http://forum.hardware.fr" description="Affiche le nombre de pages en retard dans la liste des sujets">
+		<include url="http://forum.hardware.fr/forum1f.php*" />
+		<include url="http://forum.hardware.fr/forum1.php*" />
+		<include url="http://forum.hardware.fr/*liste_sujet*" />
+		<require url="http://code.jquery.com/jquery-1.8.2.min.js" />
+	</gmscript>
+	
+	<gmscript id="last_post_highlight" name="[HFR] Last Post Highlight" version="0.1.0" namespace="http://belog.free.fr" description="Allume des leds sur les posts lus">
+		<include url="http://forum.hardware.fr/forum2.php*" />
+		<include url="http://forum.hardware.fr/*/*/*/*-sujet_*_*.htm*" />
+	</gmscript>
+	
+	<gmscript id="hfr_link_decorator" name="[HFR] Liens explicites" version="0.0.3" namespace="http://blabla.info" description="Insère un texte explicite dans les liens à la place de celui créé automatiquement par le forum">
+		<include url="http://forum.hardware.fr/*" />
+		<exclude url="http://forum.hardware.fr/message.php*" />
+		<exclude url="http://forum.hardware.fr/forum1f.php*" />
+		<exclude url="http://forum.hardware.fr/forum1.php*" />
+	</gmscript>
+
+	<gmscript id="hfr_vos_smileys_favoris" name="[HFR] Vos smileys favoris" version="1.4.0" namespace="http://forum.hardware.fr" description="Permet d'afficher une liste illimitée de smileys favoris personnels, ainsi que des statistiques sur leur utilisation (historique et les plus utilisés)">
+		<include url="http://forum.hardware.fr/*" />
+		<require url="http://forum-images.hardware.fr/compressed/editPost.js?v=11102781422" />
+	</gmscript>
+
+	<gmscript id="hfr_reparateur_ancres" name="[HFR] Réparateur d'ancres" version="0.1.0" namespace="http://forum.hardware.fr" description="Répare les ancres en cas de suppression du dernier mesage d'un sujet">
+		<include url="http://forum.hardware.fr/hfr/*#t*" />
+		<include url="http://forum.hardware.fr/forum2.php*#t*" />
+	</gmscript>
+
+	<gmscript id="hfr_spoiler_reductor" name="[HFR] Spoiler Reductor" version="1.0.0" namespace="http://forum.hardware.fr" description="Contracte les balises spoiler du forum hardware.fr en une ligne">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>		
+
+	<gmscript id="imagequotepreview" name="[HFR] Image quote preview" version="0.1.0" namespace="http://untitled-document.info/" description="Adds a preview on image quoted in mes discussions">
+		<include url="http://forum.hardware.fr/*" />
+	</gmscript>
+</gmscripts>

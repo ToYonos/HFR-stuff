@@ -1,0 +1,143 @@
+<?php
+
+$dom = new DOMDocument('1.0', 'utf-8');
+$dom->formatOutput = true;
+
+$root = $dom->createElement('rss');
+$root->setAttribute('version', '2.0');
+$dom->appendChild($root);
+$channel = $dom->createElement('channel');
+$root->appendChild($channel);
+
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode(utf8_encode('Alertes Qualitaÿ sur HFR')));
+$channel->appendChild($title);
+
+$description = $dom->createElement('description');
+$description->appendChild($dom->createTextNode(utf8_encode('Description à définir :o')));
+$channel->appendChild($description);
+
+$link = $dom->createElement('link');
+$link->appendChild($dom->createTextNode('http://forum.hardware.fr/'));
+$channel->appendChild($link);
+
+$language = $dom->createElement('language');
+$language->appendChild($dom->createTextNode('fr'));
+$channel->appendChild($language);
+
+$copyright = $dom->createElement('copyright');
+$copyright->appendChild($dom->createTextNode(utf8_encode('Copyright 2009 ToYonos')));
+$channel->appendChild($copyright);
+
+$lastBuildDate = $dom->createElement('lastBuildDate');
+$lastBuildDate->appendChild($dom->createTextNode(date(DATE_RFC822)));
+$channel->appendChild($lastBuildDate);
+
+$image = $dom->createElement('image');
+$channel->appendChild($image);
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode(utf8_encode('Alerte Qualitaÿ')));
+$image->appendChild($title);
+//$link = $dom->createElement('link');
+//$link->appendChild($dom->createTextNode('http://forum.hardware.fr/'));
+//$image->appendChild($link);
+$url = $dom->createElement('url');
+$url->appendChild($dom->createTextNode('http://hfr-rehost.net/http://pix.nofrag.com/c/3/3/8ff5702750b6d63b2aedd30e4a489.gif'));
+$image->appendChild($url);
+
+/***********************/
+
+$item = $dom->createElement('item');
+
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode(utf8_encode('Un nouveau script qui déchire sa maman')));
+$item->appendChild($title);
+
+$link = $dom->createElement('link');
+$link->appendChild($dom->createTextNode('http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_1.htm'));
+$item->appendChild($link);
+
+$pubDate = $dom->createElement('pubDate');
+$pubDate->appendChild($dom->createTextNode('Fri, 10 Apr 09 02:06:02 +0200'));
+$item->appendChild($pubDate);
+
+$descriptionContent = '<p>Une qualitaÿ a été detectée sur <b>[Firefox] Scripts GreaseMonkey pour améliorer HFR</b></p>';
+$descriptionContent .= '<p>Elle a été signalée <b>13 fois</b> par les membres suivants :</p>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li>8 fois via <a href="http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_1.htm#t2790683">ce post</a> : </li>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li><b>ToYonos (initiateur)</b> : un topic vraiment de qualitaÿ !</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '</ul>';
+$descriptionContent .= '<li>3 fois via <a href="http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_3.htm#t2793122">ce post</a> : </li>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li>Cytrouille : Topic à suivre !</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '</ul>';
+$descriptionContent .= '<li>2 fois via <a href="http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_89.htm#t2851619">ce post</a> : </li>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li>charask8 : Viendez tous !</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '</ul>';
+$descriptionContent .= '</ul>';
+
+$description = $dom->createElement('description');
+$description->appendChild($dom->createCDATASection(utf8_encode($descriptionContent)));
+$item ->appendChild($description);
+	
+$channel->appendChild($item);
+
+/***********************/
+
+$item = $dom->createElement('item');
+
+$title = $dom->createElement('title');
+$title->appendChild($dom->createTextNode(utf8_encode('Un autre script tout aussi bien')));
+$item->appendChild($title);
+
+$link = $dom->createElement('link');
+$link->appendChild($dom->createTextNode('http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_1.htm'));
+$item->appendChild($link);
+
+$pubDate = $dom->createElement('pubDate');
+$pubDate->appendChild($dom->createTextNode('Fri, 10 Apr 09 05:06:02 +0200'));
+$item->appendChild($pubDate);
+
+$descriptionContent = '<p>Une qualitaÿ a été detectée sur <b>[Firefox] Scripts GreaseMonkey pour améliorer HFR</b></p>';
+$descriptionContent .= '<p>Elle a été signalée <b>8 fois</b> par les membres suivants :</p>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li>5 fois via <a href="http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_1.htm#t2790683">ce post</a> : </li>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li>Cougy : ToYonos épouse moi :love:</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '</ul>';
+$descriptionContent .= '<li>3 fois via <a href="http://forum.hardware.fr/hfr/WindowsSoftware/Logiciels/firefox-greasemonkey-ameliorer-sujet_299916_3.htm#t2793122">ce post</a> : </li>';
+$descriptionContent .= '<ul>';
+$descriptionContent .= '<li><b>Cytrouille (initiateur)</b> : je surkiffe ce script !</li>';
+$descriptionContent .= '<li>un autre pseudo : blabla</li>';
+$descriptionContent .= '<li>un autre pseudo : (pas de commentaire)</li>';
+$descriptionContent .= '</ul>';
+$descriptionContent .= '</ul>';
+
+$description = $dom->createElement('description');
+$description->appendChild($dom->createCDATASection(utf8_encode($descriptionContent)));
+$item ->appendChild($description);
+	
+$channel->appendChild($item);
+
+header('Content-Type: application/rss+xml');
+header('Cache-Control: no-store, no-cache, must-revalidate');
+header('Pragma: no-cache');
+echo $dom->saveXml();
+
+?>

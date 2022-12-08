@@ -1,0 +1,122 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background: #F2F2F2;
+	background: #fff url("redface.png") repeat;
+}
+
+#main
+{
+	border: 1px dashed #000;
+	list-style: none outside none;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	background: #fff;
+	margin: auto;
+	margin-top: 150px;
+}
+
+.menu
+{
+	text-align: center;
+}
+
+.menu ul
+{
+	list-style: none outside none;
+	margin: 5px;
+	margin-bottom: 20px;
+	padding: 0;
+}
+
+.menu li
+{
+	margin: 3px;
+	padding: 4px;
+	display: inline;
+	background-color: #f0f0f0;
+	border: 2px outset #d3d3d3;
+	cursor: pointer;
+	font-size: 0.9em;
+}
+
+td
+{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 0.8em;
+}
+
+td input[type=text]
+{
+	border: 1px solid black;
+	width: 170px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin-top: 3px;
+	margin-bottom: 3px;
+}
+
+td input[type=button]
+{
+	border: 1px solid black;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 0.7em;
+	padding: 0;
+	margin: 3px 5px 3px 5px;
+}
+
+td.options
+{
+	width: 190px;
+	padding-left: 5px;
+	vertical-align: middle;
+}
+
+td.options span
+{
+	font-style: italic;
+}
+
+td.sample
+{
+	vertical-align: middle;
+}
+
+td.sample input
+{
+	width: 500px;
+	color: #888;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+td.preview
+{
+	padding-right: 5px;
+	vertical-align: middle;
+	width: 150px;
+}
+
+.mini_input
+{
+	width: 25px !important;
+	height: 15px;
+}
+
+.smiley
+{
+	width: 100px !important;
+	height: 15px;
+}
+
+.mini_input,
+.smiley,
+.rang
+{
+	font-size: 0.85em;
+}
+
+label
+{
+	font-size: 0.9em;
+}

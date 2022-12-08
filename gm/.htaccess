@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /gm
+RewriteCond %{REQUEST_URI} !^/gm/__
+RewriteCond %{REQUEST_URI} !^/gm/common
+RewriteRule ^([^/]+)/+([^/]*).user.js$ gmDispatch.php5?dir=$1&script=$2 [QSA,L]
+RewriteRule ^/*([^/]*).user.js$ gmDispatch.php5?script=$1 [QSA,L]

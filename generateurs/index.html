@@ -1,0 +1,249 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr" xml:lang="fr">
+	<head>
+
+		<title>:: Les Générateurs@HFR by ToYonos ::</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta http-equiv="Content-language" content="fr" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta name="Robots" content="index, follow" />
+		<meta name="keywords" content="toyonos generateur image smiley" />
+		<meta name="description" content="Générateurs de smileys pour le Forum HFR" />
+
+		<link rel="shortcut icon" href="favicon.ico" />
+		<style type="text/css" media="all">@import "style.css";</style>
+		<script type="text/javascript" src="scripts.js"></script>
+		<script type="text/javascript" src="ajaxLib.js"></script>
+	</head>
+	
+	<body>
+		<table id="main">
+			<tr class="menu">
+				<td id="menu" colspan="3"></td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="alerte" type="text" />
+				</td>
+				<td class="sample">
+					<input id="alerte_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="alerte_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="nazi" type="text" />
+				</td>
+				<td class="sample">
+					<input id="nazi_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="nazi_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="fb" type="text" />
+					<label for="fb_moi">Moi ?</label><input id="fb_moi" type="checkbox" /><br />
+					<label for="fb_pluriel">Pluriel ?</label><input id="fb_pluriel" type="checkbox" />				
+					<label for="fb_not">Négation ?</label><input id="fb_not" type="checkbox" />
+				</td>
+				<td class="sample">
+					<input id="fb_sample" type="text" readonly="readonly" />
+				</td >
+				<td class="preview">
+					<img id="fb_img" src="" alt="" />
+				</td>
+			</tr>			
+			<tr>
+				<td class="options">
+					<input id="steven_seagal" type="text" />
+				</td>
+				<td class="sample">
+					<input id="steven_seagal_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="steven_seagal_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="bulle" type="text" />
+					<label for="bulle_delta">Delta </label><input id="bulle_delta" type="text" maxlength="3" class="mini_input" />
+					<label for="bulle_flip">Inverser ?</label><input id="bulle_flip" type="checkbox" /><br />
+					<label for="bulle_smiley">Smiley </label><input id="bulle_smiley" type="text" class="smiley" />
+					<select id="bulle_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+				</td>
+				<td class="sample">
+					<input id="bulle_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="bulle_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="moit-moit_smiley1">Smiley1 </label><input id="moit-moit_smiley1" type="text" class="smiley" />
+					<select id="moit-moit_rang1" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="moit-moit_smiley2">Smiley2 </label><input id="moit-moit_smiley2" type="text" class="smiley" />
+					<select id="moit-moit_rang2" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<input id="moit-moit_switch" type="button" value="Switch" /><label for="moit-moit_vertical">Vertical ?</label><input id="moit-moit_vertical" type="checkbox" /><input id="moit-moit_random" type="button" value="Random" />
+				</td>
+				<td class="sample">
+					<input id="moit-moit_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="moit-moit_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="seal" type="text" />
+				</td>
+				<td class="sample">
+					<input id="seal_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="seal_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="ddr555_smiley">Smiley </label><input id="ddr555_smiley" type="text" class="smiley" />
+					<select id="ddr555_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="ddr555_angle">Angle </label><input id="ddr555_angle" type="text" maxlength="3" class="mini_input" />&deg;
+				</td>
+				<td class="sample">
+					<input id="ddr555_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="ddr555_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="note_numerateur">Numérateur </label><input id="note_numerateur" type="text" maxlength="2" class="mini_input" /><br />
+					<label for="note_denominateur">Dénominateur </label><input id="note_denominateur" type="text" maxlength="2" class="mini_input" /><br />
+				</td>
+				<td class="sample">
+					<input id="note_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="note_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="rofl_smiley">Smiley </label><input id="rofl_smiley" type="text" class="smiley" />
+					<select id="rofl_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="rofl_tours">Tours </label><input id="rofl_tours" type="text" maxlength="2" class="mini_input"/>&nbsp;<label for="rofl_delta">Delta </label><input id="rofl_delta" type="text" maxlength="2" class="mini_input" /><br /><label for="rofl_vitesse">Vitesse </label><select id="rofl_vitesse" class="rang"><option value="1">1</option><option value="2">2</option><option value="3" selected="selected">3</option><option value="4">4</option><option value="5">5</option></select>
+				</td>
+				<td class="sample">
+					<input id="rofl_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="rofl_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="boing_smiley">Smiley </label><input id="boing_smiley" type="text" class="smiley" />
+					<select id="boing_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="boing_dx">Dx </label><input id="boing_dx" type="text" maxlength="2" class="mini_input" />&nbsp;<label for="boing_dy">Dy </label><input id="boing_dy" type="text" maxlength="2" class="mini_input" />
+					<label for="boing_rofl">Rofl ?</label><input id="boing_rofl" type="checkbox" /><br />
+					<label for="boing_vitesse">Vitesse </label><select id="boing_vitesse" class="rang"><option value="1">1</option><option value="2">2</option><option value="3" selected="selected">3</option><option value="4">4</option><option value="5">5</option></select>
+				</td>
+				<td class="sample">
+					<input id="boing_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="boing_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="miroir_smiley">Smiley </label><input id="miroir_smiley" type="text" class="smiley" />
+					<select id="miroir_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="miroir_orientation">Orientation </label><select id="miroir_orientation" class="rang"><option value="left">Left</option><option value="right">Right</option><option value="top">Top</option><option value="bottom">Bottom</option></select>
+				</td>
+				<td class="sample">
+					<input id="miroir_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="miroir_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="sp_smiley">Smiley </label><input id="sp_smiley" type="text" class="smiley" />
+					<select id="sp_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select><br />
+					<label for="sp_limite">Limite de séparation </label><input id="sp_limite" type="text" maxlength="2" class="mini_input"/>
+				</td>
+				<td class="sample">
+					<input id="sp_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="sp_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="modo" type="text" />
+					<label for="modo_smiley">Smiley </label><input id="modo_smiley" type="text" class="smiley" />
+					<select id="modo_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>					
+				</td>
+				<td class="sample">
+					<input id="modo_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="modo_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<span>Par castormalin</span><br />
+					<label for="golden_smiley">Smiley </label><input id="golden_smiley" type="text" class="smiley" />
+					<select id="golden_rang" class="rang"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option></select>
+					<label for="golden_nb_stars">Nb max */frame </label><input id="golden_nb_stars" type="text" maxlength="3" class="mini_input" /><br />
+					<label for="golden_nb_frames">Nb frames </label><input id="golden_nb_frames" type="text" maxlength="3" class="mini_input" /><br />
+					<label for="golden_position">Position </label><select id="golden_position" class="rang"><option value="NO">Nord-Ouest</option><option value="NE">Nord-Est</option><option value="SO" selected="selected">Sud-Ouest</option><option value="SE">Sud-Est</option></select><br />
+					<label for="golden_yellow">Tx de jaune </label><input id="golden_yellow" type="text" maxlength="3" class="mini_input" />
+				</td>
+				<td class="sample">
+					<input id="golden_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="golden_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<input id="ump" type="text" />
+				</td>
+				<td class="sample">
+					<input id="ump_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="ump_img" src="" alt="" />
+				</td>
+			</tr>
+			<tr>
+				<td class="options">
+					<label for="bfmtv_text1">Ligne 1</label><input id="bfmtv_text1" type="text" /><br />
+					<label for="bfmtv_text2">Ligne 2</label><input id="bfmtv_text2" type="text" /><br />
+				</td>
+				<td class="sample">
+					<input id="bfmtv_sample" type="text" readonly="readonly" />
+				</td>
+				<td class="preview">
+					<img id="bfmtv_img" src="" alt="" />
+				</td>
+			</tr>
+		</table>
+		
+		<script type="text/javascript">generateurs.launch();</script>
+	</body>
+</html>
